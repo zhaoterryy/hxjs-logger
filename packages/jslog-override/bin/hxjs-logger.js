@@ -3,11 +3,15 @@
 var $hxEnums = {};
 var HxJsLogger = $hx_exports["HxJsLogger"] = function() { };
 HxJsLogger.trace = function(v,infos) {
-	var args = infos != null ? [infos.fileName,infos.lineNumber,v] : [v];
+	var msg = v;
+	if(infos != null && infos.customParams != null) {
+		msg += " " + infos.customParams.toString();
+	}
+	var args = infos != null ? ["" + infos.fileName + ":" + infos.lineNumber + ":",msg] : [msg];
 	if(infos != null) {
-		LogStorage.log.push({ level : "log", fileName : infos.fileName, lineNumber : infos.lineNumber, msg : v});
+		LogStorage.log.push({ level : "log", fileName : infos.fileName, lineNumber : infos.lineNumber, msg : msg.toString()});
 	} else {
-		LogStorage.log.push({ level : "log", msg : v});
+		LogStorage.log.push({ level : "log", msg : msg.toString()});
 	}
 	LogOverride.ogLog.apply(window.console,args);
 };

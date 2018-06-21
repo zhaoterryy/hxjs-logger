@@ -1,5 +1,16 @@
 {
     "name": "jstrace",
     "license": "MIT",
-    "version": "0.1.0"
+    "version": "0.1.0",
+    "url": "https://github.com/zhaoterryy/hxjs-logger",
+    "classPath": "jstrace",
+    "tags": [
+        "logger",
+        "js",
+        "trace"
+    ],
+    "contributors": [
+        "zhaoterryy"
+    ],
+    "releasenote": "initial commit"
 }
