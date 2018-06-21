@@ -3,11 +3,11 @@ package;
 import haxe.Json;
 
 @:expose
+@:keep
 class LogStorage {
-    static var log:Array<Dynamic> = [];
+    public static var log:Array<Dynamic> = [];
 
-    @:keep
-    static function getJSONLog() {
+    public static function getJSONLog() {
         return Json.stringify(log);
     }
 }
