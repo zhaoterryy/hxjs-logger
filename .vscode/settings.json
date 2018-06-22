@@ -1,8 +1,8 @@
 {
     "haxe.displayConfigurations": [
         [
-            "-cp", "packages/jslog-override/src",
-            "packages/jslog-override/build.hxml"
+            "-cp", "packages/hxjs-logger/src",
+            "packages/hxjs-logger/build.hxml"
         ]
     ]
 }

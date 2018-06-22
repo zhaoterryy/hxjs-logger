@@ -7,7 +7,7 @@
             "label": "build",
             "type": "shell",
             "options": {
-                "cwd": "${workspaceRoot}/packages/jslog-override"
+                "cwd": "${workspaceRoot}/packages/hxjs-logger"
             },
             "command": "haxe build.hxml",
             "group": {

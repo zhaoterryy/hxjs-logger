@@ -34,5 +34,9 @@ class LogOverride {
 
             ogLog.apply(Browser.window.console, msgs);
         }
+
+        untyped window.testerror = () -> {
+            Browser.document.getElementById('nah').style.left = '128312px';
+        }
     }
 }

@@ -34,6 +34,9 @@ LogOverride.init = function() {
 		LogStorage.log.push({ level : "log", msg : msgs2.toString()});
 		return LogOverride.ogLog.apply(window.console,msgs2);
 	};
+	window.testerror = function() {
+		return window.document.getElementById("nah").style.left = "128312px";
+	};
 };
 var LogStorage = $hx_exports["LogStorage"] = function() { };
 LogStorage.getJSONLog = function() {

@@ -3,8 +3,6 @@ package;
 import haxe.PosInfos;
 import js.Browser;
 
-using Lambda;
-
 @:expose
 @:keep
 class HxJsLogger {

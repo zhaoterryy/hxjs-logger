@@ -1,4 +1,4 @@
-package jstrace;
+package hxjslogger;
 
 import haxe.PosInfos;
 
