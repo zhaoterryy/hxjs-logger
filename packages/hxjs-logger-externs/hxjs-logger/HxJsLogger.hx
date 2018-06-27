@@ -6,4 +6,5 @@ import haxe.PosInfos;
 extern class HxJsLogger
 {
     static public function trace(v:Dynamic, ?infos:PosInfos):Void;
+    static public function error(v:Dynamic, ?infos:PosInfos):Void;
 }

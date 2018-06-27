@@ -30,4 +30,29 @@ class HxJsLogger {
 
         LogOverride.ogLog.apply(Browser.window.console, args);
     }
+
+    static function error (v:Dynamic, ?infos:PosInfos) {
+        var msg = v;
+        if (infos != null && infos.customParams != null) {
+            msg += " " + infos.customParams.toString();
+        }
+
+        var args:Array<Dynamic> = (infos != null) ? ['${infos.fileName}:${infos.lineNumber}:', msg] : [msg];
+
+        if (infos != null) {
+            LogStorage.log.push({
+                level: 'error',
+                fileName: infos.fileName,
+                lineNumber: infos.lineNumber,
+                msg: msg.toString()
+             });
+        } else {
+            LogStorage.log.push({
+                level: 'error',
+                msg: msg.toString()
+            });
+        }
+
+        LogOverride.ogError.apply(Browser.window.console, args);
+    }
 }

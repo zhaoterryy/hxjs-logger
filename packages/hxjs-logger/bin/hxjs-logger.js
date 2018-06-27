@@ -15,6 +15,19 @@ HxJsLogger.trace = function(v,infos) {
 	}
 	LogOverride.ogLog.apply(window.console,args);
 };
+HxJsLogger.error = function(v,infos) {
+	var msg = v;
+	if(infos != null && infos.customParams != null) {
+		msg += " " + infos.customParams.toString();
+	}
+	var args = infos != null ? ["" + infos.fileName + ":" + infos.lineNumber + ":",msg] : [msg];
+	if(infos != null) {
+		LogStorage.log.push({ level : "error", fileName : infos.fileName, lineNumber : infos.lineNumber, msg : msg.toString()});
+	} else {
+		LogStorage.log.push({ level : "error", msg : msg.toString()});
+	}
+	LogOverride.ogError.apply(window.console,args);
+};
 var LogOverride = function() { };
 LogOverride.init = function() {
 	window.console.warn = function() {
@@ -47,8 +60,8 @@ Main.main = function() {
 	LogOverride.init();
 };
 LogOverride.ogLog = window.console.log;
-LogOverride.ogWarn = window.console.warn;
 LogOverride.ogError = window.console.error;
+LogOverride.ogWarn = window.console.warn;
 LogStorage.log = [];
 Main.main();
 })(typeof exports != "undefined" ? exports : typeof window != "undefined" ? window : typeof self != "undefined" ? self : this);

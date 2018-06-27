@@ -1,9 +1,9 @@
 {
-    "name": "jstrace",
+    "name": "hxjs-logger",
     "license": "MIT",
     "version": "0.1.0",
     "url": "https://github.com/zhaoterryy/hxjs-logger",
-    "classPath": "jstrace",
+    "classPath": "hxjs-logger",
     "tags": [
         "logger",
         "js",
