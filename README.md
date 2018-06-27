@@ -2,4 +2,4 @@
 
 <b>Installation</b>
 
-<code>haxelib install jstrace</code>
+<code>haxelib install hxjs-logger</code>
