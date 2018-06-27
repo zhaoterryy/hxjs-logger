@@ -2,4 +2,4 @@
 
 <b>Installation</b>
 
-<code>haxelib install hxjs-logger</code>
+<code>haxelib install hxjslogger</code>
