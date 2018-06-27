@@ -1,9 +1,8 @@
 {
-    "name": "hxjs-logger",
+    "name": "hxjslogger",
     "license": "MIT",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "url": "https://github.com/zhaoterryy/hxjs-logger",
-    "classPath": "hxjs-logger",
     "tags": [
         "logger",
         "js",

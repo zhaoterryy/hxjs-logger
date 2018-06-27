@@ -1,2 +1,2 @@
--cp packages/jstrace
+-lib hxjslogger
 -main JstraceTest

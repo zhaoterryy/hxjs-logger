@@ -9,8 +9,4 @@ class TraceOverride {
             HxJsLogger.trace(v, infos);
         }
     }
-
-    public static function error(cl:Class<Log>, v:Dynamic, ?infos:PosInfos) {
-        HxJsLogger.error(v, infos);
-    }
 }

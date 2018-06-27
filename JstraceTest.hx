@@ -1,10 +1,10 @@
 package;
 
-import jstrace.*;
+import hxjslogger.TraceOverride;
 
 class JstraceTest {
 
     static function main() {
-        TraceOverride.init();
+        trace('poop');
     }
 }
