@@ -21,10 +21,11 @@ HxJsLogger.error = function(v,infos) {
 		msg += " " + infos.customParams.toString();
 	}
 	var args = infos != null ? ["" + infos.fileName + ":" + infos.lineNumber + ":",msg] : [msg];
+	var stack = new Error().stack;
 	if(infos != null) {
-		LogStorage.log.push({ level : "error", fileName : infos.fileName, lineNumber : infos.lineNumber, msg : msg.toString()});
+		LogStorage.log.push({ level : "error", fileName : infos.fileName, lineNumber : infos.lineNumber, msg : msg.toString(), stack : stack});
 	} else {
-		LogStorage.log.push({ level : "error", msg : msg.toString()});
+		LogStorage.log.push({ level : "error", msg : msg.toString(), stack : stack});
 	}
 	LogOverride.ogError.apply(window.console,args);
 };

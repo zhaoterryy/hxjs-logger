@@ -1,5 +1,6 @@
 package;
 
+import js.Error;
 import haxe.PosInfos;
 import js.Browser;
 
@@ -38,18 +39,21 @@ class HxJsLogger {
         }
 
         var args:Array<Dynamic> = (infos != null) ? ['${infos.fileName}:${infos.lineNumber}:', msg] : [msg];
+        var stack = new Error().stack;
 
         if (infos != null) {
             LogStorage.log.push({
                 level: 'error',
                 fileName: infos.fileName,
                 lineNumber: infos.lineNumber,
-                msg: msg.toString()
+                msg: msg.toString(),
+                stack: stack
              });
         } else {
             LogStorage.log.push({
                 level: 'error',
-                msg: msg.toString()
+                msg: msg.toString(),
+                stack: stack
             });
         }
 
