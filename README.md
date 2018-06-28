@@ -7,7 +7,5 @@ Advanced logger for Haxe
 
 
 <b>Installation</b>
-
-`haxelib install loggy`
-
-Call `Loggy.init()` to start loggy.
+* `haxelib install loggy`
+* `Loggy.init()` to start loggy.
