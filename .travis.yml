@@ -1,5 +1,5 @@
 language: haxe
-before_script: cd test
+before_install: cd test
 haxe:
   - stable
   - development
