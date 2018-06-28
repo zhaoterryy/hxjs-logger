@@ -5,4 +5,4 @@ haxe:
   - development
   - "3.4.7"
 hxml:
-  - test/jsbuild.hxml
+  - jsbuild.hxml
