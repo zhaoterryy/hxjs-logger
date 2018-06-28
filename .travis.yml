@@ -6,3 +6,6 @@ haxe:
   - "3.4.7"
 hxml:
   - jsbuild.hxml
+
+notifications:
+  slack: geappdash:gFksxqhr4zmG61ShkdYAvLDE
