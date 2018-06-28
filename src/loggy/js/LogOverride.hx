@@ -15,7 +15,7 @@ class LogOverride {
 
     private static function init() {
         untyped window.console.warn = function() {
-            var msgs:Array<Dynamic> = Array.from(arguments);
+            var msgs:Array<Dynamic> = Array.from(untyped __js__('arguments'));
             var stack = new Error().stack;
             LogStorage.log.push({ level:'warn', msg:msgs.toString(), stack:stack });
 
@@ -23,7 +23,7 @@ class LogOverride {
         }
 
         untyped window.console.error = function() {
-            var msgs:Array<Dynamic> = Array.from(arguments);
+            var msgs:Array<Dynamic> = Array.from(untyped __js__('arguments'));
             var stack = new Error().stack;
             LogStorage.log.push({ level:'error', msg:msgs.toString(), stack:stack });
 
@@ -32,7 +32,7 @@ class LogOverride {
         }
 
         untyped window.console.log = function() {
-            var msgs:Array<Dynamic> = Array.from(arguments);
+            var msgs:Array<Dynamic> = Array.from(untyped __js__('arguments'));
             LogStorage.log.push({ level:'log', msg:msgs.toString() });
 
             ogLog.apply(Browser.window.console, msgs);
