@@ -1,4 +1,4 @@
-# loggy
+# loggy [![Build Status](https://travis-ci.org/zhaoterryy/loggy.svg?branch=master)](https://travis-ci.org/zhaoterryy/loggy)
 http://lib.haxe.org/p/loggy/
 
 Advanced logger for Haxe
