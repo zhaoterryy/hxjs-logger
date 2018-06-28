@@ -1,12 +1,16 @@
 # loggy
+http://lib.haxe.org/p/loggy/
 
 Advanced logger for Haxe
 
 <b>Targets</b>
-
-• Javascript
+* Javascript
 
 
 <b>Installation</b>
+* `haxelib install loggy`
+* `Loggy.init()` to start loggy.
 
-<code>haxelib install loggy</code>
+## features
+* Log storage for console.log/.warn/.error()
+* Error function with stack trace `Loggy.error()`
