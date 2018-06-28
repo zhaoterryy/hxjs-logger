@@ -2,7 +2,7 @@ package loggy.util;
 
 import haxe.Json;
 
-@:expose
+@:expose("LogStorage")
 @:keep
 class Storage {
     public static var log:Array<Dynamic> = [];

@@ -1,8 +1,8 @@
 {
     "haxe.displayConfigurations": [
-        [
-            "-cp", "packages/hxjs-logger/src",
-            "packages/hxjs-logger/build.hxml"
+        [   
+            "--cwd src",
+            "../test/jsbuild.hxml"
         ]
     ]
 }

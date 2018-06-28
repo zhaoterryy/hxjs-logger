@@ -5,7 +5,7 @@ import haxe.PosInfos;
 import js.Browser;
 import loggy.util.Storage as LogStorage;
 
-@:expose
+@:expose("Loggy")
 @:keep
 class Loggy {
     static function trace (v:Dynamic, ?infos:PosInfos) {

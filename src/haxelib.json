@@ -1,15 +1,16 @@
 {
     "name": "loggy",
     "license": "MIT",
-    "version": "0.0.1",
+    "version": "0.0.5",
     "url": "https://github.com/zhaoterryy/loggy",
     "tags": [
         "logger",
         "js",
         "trace"
     ],
+    "description": "Advanced logger for Haxe, targetting Javascript",
     "contributors": [
         "zhaoterryy"
     ],
-    "releasenote": "initial commit"
+    "releasenote": "haxe 3.x compatibility"
 }

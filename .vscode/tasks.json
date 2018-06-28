@@ -7,9 +7,9 @@
             "label": "build",
             "type": "shell",
             "options": {
-                "cwd": "${workspaceRoot}/packages/hxjs-logger"
+                "cwd": "${workspaceRoot}/test"
             },
-            "command": "haxe build.hxml",
+            "command": "haxe jsbuild.hxml",
             "group": {
                 "kind": "build",
                 "isDefault": true
