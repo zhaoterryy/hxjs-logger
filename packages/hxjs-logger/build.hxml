@@ -1,5 +1,0 @@
--cp src
--js bin/hxjs-logger.js
--main Main
--dce full
--D js_flatten

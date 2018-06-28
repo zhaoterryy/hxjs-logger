@@ -1,10 +1,10 @@
-package;
+package loggy.util;
 
 import haxe.Json;
 
 @:expose
 @:keep
-class LogStorage {
+class Storage {
     public static var log:Array<Dynamic> = [];
 
     public static function getJSONLog() {

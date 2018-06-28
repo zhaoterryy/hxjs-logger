@@ -1,8 +1,10 @@
-package;
+package loggy.js;
 
 import js.Error;
 import js.Browser;
+import loggy.util.Storage as LogStorage;
 
+@:allow(loggy.Loggy)
 class LogOverride {
     public static var ogLog = untyped window.console.log;
     public static var ogError = untyped window.console.error;
@@ -10,7 +12,7 @@ class LogOverride {
     static var ogInfo = untyped window.console.info;
     static var ogWarn = untyped window.console.warn;
 
-    public static function init() {
+    private static function init() {
         untyped window.console.warn = () -> {
             var msgs:Array<Dynamic> = Array.from(arguments);
             var stack = new Error().stack;

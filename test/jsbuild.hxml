@@ -1,0 +1,8 @@
+-cp ../src
+
+loggy.js.Loggy
+loggy.js.LogOverride
+
+-js bin/loggy.js
+-dce full
+-D js_flatten

@@ -1,12 +1,13 @@
-package;
+package loggy.js;
 
 import js.Error;
 import haxe.PosInfos;
 import js.Browser;
+import loggy.util.Storage as LogStorage;
 
 @:expose
 @:keep
-class HxJsLogger {
+class Loggy {
     static function trace (v:Dynamic, ?infos:PosInfos) {
         var msg = v;
         if (infos != null && infos.customParams != null) {
