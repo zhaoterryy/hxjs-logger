@@ -3,10 +3,11 @@
 Advanced logger for Haxe
 
 <b>Targets</b>
-
-• Javascript
+* Javascript
 
 
 <b>Installation</b>
 
-<code>haxelib install loggy</code>
+`haxelib install loggy`
+
+Call `Loggy.init()` to start loggy.
