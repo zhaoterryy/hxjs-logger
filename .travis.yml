@@ -1,0 +1,7 @@
+language: haxe
+haxe:
+  - stable
+  - development
+  - "3.4.7"
+hxml:
+  - test/jsbuild.hxml
