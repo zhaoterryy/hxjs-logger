@@ -23,7 +23,7 @@ class Loggy
         #end
     }
 
-    public static function error(v:Dynamic, ?infos:PosInfos) {
+    public static function error(cl:Class<Log>, v:Dynamic, ?infos:PosInfos) {
         LoggyLog.error(v, infos);
     }
 }
