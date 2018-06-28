@@ -14,6 +14,14 @@
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "label": "build example",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceRoot}/example"
+            },
+            "command": "haxe example.hxml"
         }
     ]
 }

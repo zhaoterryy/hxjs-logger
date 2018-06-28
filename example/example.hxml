@@ -1,0 +1,4 @@
+-lib loggy
+-cp src
+-main Main
+-js bin/example.js

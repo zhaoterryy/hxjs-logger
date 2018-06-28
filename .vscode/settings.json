@@ -3,6 +3,10 @@
         [   
             "--cwd src",
             "../test/jsbuild.hxml"
+        ],
+        [
+            "--cwd example",
+            "example.hxml"
         ]
     ]
 }
