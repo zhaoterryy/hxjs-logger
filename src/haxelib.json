@@ -1,7 +1,7 @@
 {
     "name": "loggy",
     "license": "MIT",
-    "version": "0.0.5",
+    "version": "0.1.0",
     "url": "https://github.com/zhaoterryy/loggy",
     "tags": [
         "logger",
@@ -12,5 +12,5 @@
     "contributors": [
         "zhaoterryy"
     ],
-    "releasenote": "haxe 3.x compatibility"
+    "releasenote": "Introduce Loggy.error()"
 }

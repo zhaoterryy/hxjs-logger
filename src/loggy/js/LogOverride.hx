@@ -5,7 +5,7 @@ import js.Browser;
 import loggy.js.Loggy;
 import loggy.util.Storage as LogStorage;
 
-@:allow(loggy.LoggyInit)
+@:allow(loggy.Loggy)
 class LogOverride {
     public static var ogLog = untyped window.console.log;
     public static var ogError = untyped window.console.error;

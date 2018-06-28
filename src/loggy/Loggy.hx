@@ -5,21 +5,25 @@ import haxe.Log;
 import haxe.PosInfos;
 
 @:native("Loggy")
-extern class Loggy
+extern class LoggyLog
 {
     static public function trace(v:Dynamic, ?infos:PosInfos):Void;
     static public function error(v:Dynamic, ?infos:PosInfos):Void;
 }
 
-class LoggyInit 
+class Loggy
 {
-    public function new() {
+    public static function init() {
         Log.trace = function(v:Dynamic, ?infos:PosInfos) {
-            Loggy.trace(v, infos);
+            LoggyLog.trace(v, infos);
         }
 
         #if js
         LogOverride.init();
         #end
+    }
+
+    public static function error(v:Dynamic, ?infos:PosInfos) {
+        LoggyLog.error(v, infos);
     }
 }
