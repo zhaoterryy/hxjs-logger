@@ -1,4 +1,5 @@
 # loggy
+http://lib.haxe.org/p/loggy/
 
 Advanced logger for Haxe
 
@@ -9,3 +10,7 @@ Advanced logger for Haxe
 <b>Installation</b>
 * `haxelib install loggy`
 * `Loggy.init()` to start loggy.
+
+## features
+* Log storage for console.log/.warn/.error()
+* Error function with stack trace `Loggy.error()`
