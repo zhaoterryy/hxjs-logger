@@ -17,14 +17,14 @@ class Loggy {
         var args:Array<Dynamic> = (infos != null) ? ['${infos.fileName}:${infos.lineNumber}:', msg] : [msg];
 
         if (infos != null) {
-            LogStorage.log.push({
+            LogStorage.push({
                 level: 'log',
                 fileName: infos.fileName,
                 lineNumber: infos.lineNumber,
                 msg: msg.toString()
              });
         } else {
-            LogStorage.log.push({
+            LogStorage.push({
                 level: 'log',
                 msg: msg.toString()
             });
@@ -43,7 +43,7 @@ class Loggy {
         var stack = new Error().stack;
 
         if (infos != null) {
-            LogStorage.log.push({
+            LogStorage.push({
                 level: 'error',
                 fileName: infos.fileName,
                 lineNumber: infos.lineNumber,
@@ -51,7 +51,7 @@ class Loggy {
                 stack: stack
              });
         } else {
-            LogStorage.log.push({
+            LogStorage.push({
                 level: 'error',
                 msg: msg.toString(),
                 stack: stack
@@ -71,7 +71,7 @@ class Loggy {
         var stack = new Error().stack;
 
         if (infos != null) {
-            LogStorage.log.push({
+            LogStorage.push({
                 level: 'warn',
                 fileName: infos.fileName,
                 lineNumber: infos.lineNumber,
@@ -79,7 +79,7 @@ class Loggy {
                 stack: stack
              });
         } else {
-            LogStorage.log.push({
+            LogStorage.push({
                 level: 'warn',
                 msg: msg.toString(),
                 stack: stack

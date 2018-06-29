@@ -1,4 +1,5 @@
 -cp ../src
+-lib hxnodejs
 
 loggy.js.Loggy
 loggy.js.LogOverride
@@ -8,3 +9,4 @@ loggy.Loggy
 -dce full
 -D js_flatten
 -D haxe3compat
+-D js-es5
