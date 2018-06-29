@@ -8,7 +8,7 @@ import loggy.util.Storage as LogStorage;
 @:expose("Loggy")
 @:keep
 class Loggy {
-    static function trace (v:Dynamic, ?infos:PosInfos) {
+    static function trace(v:Dynamic, ?infos:PosInfos) {
         var msg = v;
         if (infos != null && infos.customParams != null) {
             msg += " " + infos.customParams.toString();
@@ -33,7 +33,7 @@ class Loggy {
         LogOverride.ogLog.apply(Browser.window.console, args);
     }
 
-    static function error (v:Dynamic, ?infos:PosInfos) {
+    static function error(v:Dynamic, ?infos:PosInfos) {
         var msg = v;
         if (infos != null && infos.customParams != null) {
             msg += " " + infos.customParams.toString();
@@ -59,5 +59,33 @@ class Loggy {
         }
 
         LogOverride.ogError.apply(Browser.window.console, args);
+    }
+
+    static function warn(v:Dynamic, ?infos:PosInfos) {
+        var msg = v;
+        if (infos != null && infos.customParams != null) {
+            msg += " " + infos.customParams.toString();
+        }
+
+        var args:Array<Dynamic> = (infos != null) ? ['${infos.fileName}:${infos.lineNumber}:', msg] : [msg];
+        var stack = new Error().stack;
+
+        if (infos != null) {
+            LogStorage.log.push({
+                level: 'warn',
+                fileName: infos.fileName,
+                lineNumber: infos.lineNumber,
+                msg: msg.toString(),
+                stack: stack
+             });
+        } else {
+            LogStorage.log.push({
+                level: 'warn',
+                msg: msg.toString(),
+                stack: stack
+            });
+        }
+
+        LogOverride.ogWarn.apply(Browser.window.console, args);
     }
 }

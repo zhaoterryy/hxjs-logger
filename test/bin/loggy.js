@@ -30,11 +30,26 @@ loggy_js_Loggy.error = function(v,infos) {
 	}
 	loggy_js_LogOverride.ogError.apply(window.console,args);
 };
+loggy_js_Loggy.warn = function(v,infos) {
+	var msg = v;
+	if(infos != null && infos.customParams != null) {
+		msg += " " + infos.customParams.toString();
+	}
+	var args = infos != null ? ["" + infos.fileName + ":" + infos.lineNumber + ":",msg] : [msg];
+	var stack = new Error().stack;
+	if(infos != null) {
+		loggy_util_Storage.log.push({ level : "warn", fileName : infos.fileName, lineNumber : infos.lineNumber, msg : msg.toString(), stack : stack});
+	} else {
+		loggy_util_Storage.log.push({ level : "warn", msg : msg.toString(), stack : stack});
+	}
+	loggy_js_LogOverride.ogWarn.apply(window.console,args);
+};
 var loggy_util_Storage = $hx_exports["LogStorage"] = function() { };
 loggy_util_Storage.getJSONLog = function() {
 	return JSON.stringify(loggy_util_Storage.log);
 };
 loggy_js_LogOverride.ogLog = window.console.log;
 loggy_js_LogOverride.ogError = window.console.error;
+loggy_js_LogOverride.ogWarn = window.console.warn;
 loggy_util_Storage.log = [];
 })(typeof exports != "undefined" ? exports : typeof window != "undefined" ? window : typeof self != "undefined" ? self : this);

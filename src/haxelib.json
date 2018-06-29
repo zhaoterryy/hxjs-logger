@@ -1,7 +1,7 @@
 {
     "name": "loggy",
     "license": "MIT",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "url": "https://github.com/zhaoterryy/loggy",
     "tags": [
         "logger",
@@ -12,5 +12,5 @@
     "contributors": [
         "zhaoterryy"
     ],
-    "releasenote": "fix for haxe 3.x not supporting js keyword 'arguments'"
+    "releasenote": "added Loggy.warn()"
 }

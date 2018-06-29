@@ -9,9 +9,7 @@ import loggy.util.Storage as LogStorage;
 class LogOverride {
     public static var ogLog = untyped window.console.log;
     public static var ogError = untyped window.console.error;
-    static var ogDebug = untyped window.console.debug;
-    static var ogInfo = untyped window.console.info;
-    static var ogWarn = untyped window.console.warn;
+    public static var ogWarn = untyped window.console.warn;
 
     private static function init() {
         untyped window.console.warn = function() {
