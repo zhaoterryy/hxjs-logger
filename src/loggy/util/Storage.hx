@@ -31,4 +31,7 @@ class Storage {
     }
     #end
 
+    public macro static function s() {
+
+    }
 }

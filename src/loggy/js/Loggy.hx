@@ -14,6 +14,8 @@ class Loggy {
             msg += " " + infos.customParams.toString();
         }
 
+        if (msg == null) msg = "null";
+
         var args:Array<Dynamic> = (infos != null) ? ['${infos.fileName}:${infos.lineNumber}:', msg] : [msg];
 
         if (infos != null) {
@@ -38,6 +40,8 @@ class Loggy {
         if (infos != null && infos.customParams != null) {
             msg += " " + infos.customParams.toString();
         }
+
+        if (msg == null) msg = "null";
 
         var args:Array<Dynamic> = (infos != null) ? ['${infos.fileName}:${infos.lineNumber}:', msg] : [msg];
         var stack = new Error().stack;
